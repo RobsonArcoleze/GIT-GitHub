@@ -1,0 +1,81 @@
+comandos do GIT essênciais
+
+git init - Iniciando um repositório
+
+git add + mais nome do arquivo - enviando o arquivo para o stage
+
+git add . - adiciona todos os arquivos para a area de stage
+
+git status - verifica o status do stage
+
+git commit -a-m"" - Para commitar um arquivo com uma msg
+
+git push - envia o arquivo para o repositório remoto
+
+git pull procura atualizações no repositório remoto
+
+git clone - copia os arquivos do repo remoto
+
+git rm - removendo algum arquivo
+
+git log - mostra o histórico de atualizações
+
+git mv - Com o comando git mv podemos renomear um arquivo;
+         O mesmo também pode ser movido para outra pasta;
+         E isso fará com que este novo arquivo seja monitorado pelo git;
+         O arquivo anterior é excluído;
+
+git checkout + nome do arquivo - volta o arquivo ao estado original como na main
+
+.gitignore - ignora arquivos de conteudo sensivel ou desnecessários
+
+git reset - Com o comando git reset podemos resetar as mudanças feitas
+            Geralmente é utilizado com a flag --hard
+            Todas as alterações commitadas e também as pendentes serão excluídas;
+
+----------------------------------------------------------------------------------------------------------------------
+
+O QUE É UM BRANCH
+
+É uma versão separada do codigo, ajudar na organização e no final todos os branches se unirão
+
+git branch - Visualizando os branchs que foram criados;
+
+git branch <nome> - Cria um novo branch;
+
+git branch -d - Deleta um branch (Isso normalmente não é feito);
+
+git checkout -b <nome> - Muda de branch; 
+
+git merge <nome> para unir os branches //Em projetos profissionais não se deve subir para a master diretamente; haverá um responsavel que analisára o codigo e o mesmo fara o envio se tudo estiver ok;
+
+----------------------------------------------------------------------------------------------------------------------
+
+GIT STASH
+
+git stash - Serve para descartar as mudanças feitas no arquivo (Só funciona se não tiver realizado algum commit);
+
+git stach list - Mostrando os stashs realizados
+
+git stash show -p + número da stach - Mostra os detalhes do código;
+
+git stash apply + número da stach - Recupera essa stach;
+
+git stash clear - Remove todas as stashs
+
+git stash drop <nome> - Remove a stach <nome>;
+
+----------------------------------------------------------------------------------------------------------------------
+GIT TAG
+
+Podemos criar tags nos branches por meio do comando git tag -a
+<nome> -m “<msg>”
+A tag é diferente do stash, serve como um checkpoint de um branch;
+É utilizada para demarcar estágios do desenvolvimento de algum
+recurso;
+
+git tag -a <nome> -m “<msg>”  - Criando uma Tag ex: -a <V1.0> pode mostra a versão -m "Uma msg sobre este commit
+osb: Interessante commitar depois de criar uma tag, essa tag criada é para o branch que estamos trabalhando;
+
+
+Testanto tag 2
